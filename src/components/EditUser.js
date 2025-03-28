@@ -7,17 +7,16 @@ const EditUser = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [user, setUser] = useState({ first_name: "", last_name: "", email: "" });
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
         const response = await apiService.getUserById(id);
         setUser(response.data.data);
-        setLoading(false);
+        
       } catch (error) {
         console.error("Error fetching user data:", error);
-        setLoading(false);
+        
       }
     };
     fetchUser();

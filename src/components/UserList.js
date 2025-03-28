@@ -1,12 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import { apiService } from "../services/api";
-import { AuthContext } from "../context/AuthContext";
 import Swal from "sweetalert2"; // Import SweetAlert2
 
 const UsersList = () => {
   const [users, setUsers] = useState([]);
-  const { token } = useContext(AuthContext);
   const [loggedInUserId, setLoggedInUserId] = useState(null);
 
   useEffect(() => {
