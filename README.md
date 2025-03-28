@@ -47,7 +47,6 @@ npm start
 /employewise
 │── src/
 │   ├── components/   # Reusable React components
-│   ├── pages/        # Page-specific components (Login, User List, Edit User)
 │   ├── services/     # API calls & authentication services
 │   ├── context/      # AuthContext for managing authentication state
 │   ├── App.js        # Main application entry point
